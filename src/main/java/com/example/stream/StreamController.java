@@ -22,6 +22,7 @@ public class StreamController {
 
         return ResponseEntity
                 .ok()
+                .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .body(outputStream -> {
                     outputStream.write(test);
                     outputStream.flush();
